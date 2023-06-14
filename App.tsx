@@ -7,7 +7,7 @@ import {
   Roboto_400Regular,
   Roboto_700Bold,
 } from '@expo-google-fonts/roboto'
-import { ActivityIndicator } from 'react-native'
+import { Loading } from '@components/Loading'
 
 export default function App() {
   const [frontsLoaded] = useFonts({
@@ -17,7 +17,7 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      {frontsLoaded ? <Groups /> : <ActivityIndicator />}
+      {frontsLoaded ? <Groups /> : <Loading />}
       <StatusBar style="light" />
     </ThemeProvider>
   )
