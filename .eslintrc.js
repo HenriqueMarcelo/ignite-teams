@@ -3,5 +3,6 @@ module.exports = {
   rules: {
     'no-unused-vars': 1,
     'prefer-template': 1,
+    camelcase: 0,
   },
 }
