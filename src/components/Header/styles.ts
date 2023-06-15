@@ -1,6 +1,7 @@
 import styled from 'styled-components/native'
-import { CaretLeft } from 'phosphor-react-native'
-// import CaretLeft from 'phosphor-react-native/src/icons/CaretLeft'
+// import { CaretLeft } from 'phosphor-react-native'
+// for corect tree shaking
+import CaretLeft from 'phosphor-react-native/src/icons/CaretLeft'
 
 export const Container = styled.View`
   width: 100%;
