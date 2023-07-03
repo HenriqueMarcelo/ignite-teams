@@ -13,7 +13,7 @@ export function Players() {
         subtitle="adicione a galera e separe o time"
       />
 
-      <ButtonIcon type="PRIMARY" />
+      <ButtonIcon type="PRIMARY" icon="add-chart" />
     </Container>
   )
 }
