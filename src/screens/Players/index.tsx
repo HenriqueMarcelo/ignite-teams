@@ -6,10 +6,16 @@ import { Input } from '@components/Input'
 import { Filter } from '@components/Filter'
 import { FlatList } from 'react-native'
 import { useState } from 'react'
+import { PlayerCard } from '@components/PlayerCard'
 
 export function Players() {
   const [team, setTeam] = useState('Time A')
-  const [players, setPlayers] = useState(['Time A', 'Time B'])
+  const [teams, setTeams] = useState(['Time A', 'Time B'])
+  const [players, setPlayers] = useState([
+    'João Silva',
+    'Paulo Souza',
+    'Ana Lima',
+  ])
 
   return (
     <Container>
@@ -25,7 +31,7 @@ export function Players() {
       </Form>
       <HeaderList>
         <FlatList
-          data={players}
+          data={teams}
           keyExtractor={(item) => item}
           renderItem={({ item }) => (
             <Filter
@@ -36,8 +42,15 @@ export function Players() {
           )}
           horizontal
         />
-        <NumbersOfPlayers>{players.length}</NumbersOfPlayers>
+        <NumbersOfPlayers>{teams.length}</NumbersOfPlayers>
       </HeaderList>
+      <FlatList
+        data={players}
+        keyExtractor={(item) => item}
+        renderItem={({ item }) => (
+          <PlayerCard name={item} onRemove={() => {}} />
+        )}
+      />
     </Container>
   )
 }
