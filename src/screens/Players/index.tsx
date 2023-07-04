@@ -12,17 +12,8 @@ import { Button } from '@components/Button'
 
 export function Players() {
   const [team, setTeam] = useState('Time A')
-  const [teams, setTeams] = useState(['Time A', 'Time B'])
-  const [players, setPlayers] = useState([
-    'João Silva',
-    'Paulo Souza',
-    'Ana Lima',
-    'João Silva',
-    'Paulo Souza',
-    'Ana Lima',
-    'João Silva',
-    'Paulo Souza',
-    'Ana Lima',
+  const [teams, _setTeams] = useState(['Time A', 'Time B'])
+  const [players, _setPlayers] = useState([
     'João Silva',
     'Paulo Souza',
     'Ana Lima',
