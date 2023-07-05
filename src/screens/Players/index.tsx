@@ -105,7 +105,7 @@ export function Players() {
       navigation.navigate('groups')
     } catch (error) {
       console.log(error)
-      Alert.alert('Remover', 'Não foi possível remover o grupo')
+      Alert.alert('Remover', 'Não foi possível remover a turma')
     }
   }
 
